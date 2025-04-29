@@ -34,7 +34,7 @@ def print_board(board: List[List[int]], state: GameState) -> None:
 
     # --- Print each level of pegs ---
     for level in levels:
-        line = ""
+        line = f"{level:2d}   "
         for stack in board:
             if len(stack) < level:
                 # Empty space with peg
@@ -46,7 +46,7 @@ def print_board(board: List[List[int]], state: GameState) -> None:
         print(line)
 
     # --- Print the base ---
-    print('-' * (n * 6 + 3))
+    print('     ' +  '-' * (n * 6 + 3))
     print()
     
     sleep(state.delay)  # Small pause for animation effect
