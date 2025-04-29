@@ -85,7 +85,7 @@ def main() -> None:
     num_of_discs_to_move = int(sys.argv[2])
 
     # --- Handle optional delay ---
-    delay = 0.01  # Default
+    delay = 5/(2**num_of_discs)  # Default, simulation will take approximately 5 seconds
     if any('delay' in arg for arg in sys.argv):
         _, delay_str = [arg for arg in sys.argv if 'delay' in arg][0].split('=')
         delay = float(delay_str)
